@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Python Chat App</h1>
+
+        <div id="join-section">
+            <input id="username" type="text" placeholder="Enter your name">
+            <button id="join-button">Join Chat</button>
+        </div>
+
+        <div id="chat-section" class="hidden">
+            <div id="messages"></div>
+
+            <div class="message-form">
+                <input id="message-input" type="text" placeholder="Type a message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
